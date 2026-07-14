@@ -161,7 +161,7 @@ function Skills() {
 
 function AboutSection() {
   return (
-    <div id="about" className="-translate-x-1/2 absolute h-[555px] left-1/2 overflow-clip top-[830px] w-screen" data-name="About section">
+    <div id="about" className="-translate-x-1/2 absolute h-[555px] left-1/2 overflow-clip top-[830px] w-[1512px]" data-name="About section">
       <div aria-hidden className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 overflow-hidden">
           <img alt="" className="absolute h-full w-full object-cover left-0 top-0" src={imgAboutSection} />
@@ -325,8 +325,8 @@ function HeroImage() {
 
 function HeroSection() {
   return (
-    <div id="home" className="-translate-x-1/2 absolute h-[600px] left-1/2 top-[150px] w-screen bg-black" data-name="Hero section">
-      <div className="-translate-x-1/2 absolute bg-black h-[600px] left-1/2 overflow-clip top-0 w-screen" data-name="Gradients">
+    <div id="home" className="-translate-x-1/2 absolute h-[600px] left-1/2 top-[150px] w-[1512px] bg-black" data-name="Hero section">
+      <div className="-translate-x-1/2 absolute bg-black h-[600px] left-1/2 overflow-clip top-0 w-[1512px]" data-name="Gradients">
         <div className="relative w-[1512px] h-full mx-auto">
           <div className="absolute left-[-150px] size-[480px] top-[-114px]">
             <div className="absolute inset-[-20.83%]">
@@ -969,7 +969,7 @@ function SocialHandles() {
 
 function Header({ activeSection }: { activeSection: string }) {
   return (
-    <div className="-translate-x-1/2 absolute bg-[rgba(0,0,0,0.85)] h-[130px] left-1/2 top-0 w-screen border-b border-white/5 backdrop-blur-md z-50" data-name="Header">
+    <div className="-translate-x-1/2 absolute bg-[rgba(0,0,0,0.85)] h-[130px] left-1/2 top-0 w-[1512px] border-b border-white/5 backdrop-blur-md z-50" data-name="Header">
       <div className="relative w-[1512px] h-full mx-auto">
         <p className="[word-break:break-word] absolute font-['Exo_2:Regular',sans-serif] font-normal leading-[20px] left-[120px] text-[30px] text-white top-[70px] tracking-[-3px] whitespace-nowrap">Olial Kibria Konok</p>
         <NavigationBar activeSection={activeSection} />
@@ -981,7 +981,7 @@ function Header({ activeSection }: { activeSection: string }) {
 
 function Footer() {
   return (
-    <footer className="-translate-x-1/2 absolute top-[5130px] left-1/2 w-screen py-10 flex flex-col items-center justify-center gap-6 border-t border-white/5 bg-zinc-950/40 backdrop-blur-md relative overflow-hidden z-50">
+    <footer className="-translate-x-1/2 absolute top-[5130px] left-1/2 w-[1512px] py-10 flex flex-col items-center justify-center gap-6 border-t border-white/5 bg-zinc-950/40 backdrop-blur-md relative overflow-hidden z-50">
       {/* Decorative radial purple background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] h-[1px] bg-gradient-to-r from-transparent via-purple-500/50 to-transparent shadow-[0_0_20px_rgba(168,85,247,0.8)]" />
       
@@ -1088,7 +1088,7 @@ export default function Desktop() {
       <PortfolioRow id="facehead" title="Facehead YT Video" videos={faceheadVideos} topY={3235} onPlay={setActiveVideo} isVertical />
       <PortfolioRow id="saasmotions" title="SaaS & Motion graphics" videos={saasmotionsVideos} topY={3785} onPlay={setActiveVideo} />
 
-      <div className="-translate-x-1/2 absolute top-[4890px] h-0 left-1/2 w-screen" data-name="Separator">
+      <div className="-translate-x-1/2 absolute top-[4890px] h-0 left-1/2 w-[1512px]" data-name="Separator">
         <div className="absolute inset-[-50px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1920 50">
             <line id="Separator" stroke="url(#paint0_linear_1_307)" strokeOpacity="0.1" strokeWidth="50" x2="1920" y1="25" y2="25" />

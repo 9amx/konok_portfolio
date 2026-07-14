@@ -13,10 +13,17 @@ const fontOverrides = `
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(false);
+  const [scale, setScale] = useState(1);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
+      const width = window.innerWidth;
+      setIsMobile(width < 1024);
+      if (width >= 1024 && width < 1512) {
+        setScale(width / 1512);
+      } else {
+        setScale(1);
+      }
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -29,8 +36,17 @@ export default function App() {
       {isMobile ? (
         <Mobile />
       ) : (
-        <div className="min-h-screen w-full bg-[#000001] overflow-x-hidden">
-          <div className="relative w-[1512px] mx-auto" style={{ minHeight: "5330px" }}>
+        <div className="min-h-screen w-full bg-[#000001] overflow-x-hidden flex flex-col items-center">
+          <div 
+            style={{ 
+              width: "1512px",
+              minHeight: "5330px",
+              transform: `scale(${scale})`,
+              transformOrigin: "top center",
+              marginBottom: `${(scale - 1) * 5330}px`,
+            }}
+            className="relative shrink-0"
+          >
             <Desktop />
           </div>
         </div>
